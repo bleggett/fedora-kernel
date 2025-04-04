@@ -141,9 +141,9 @@ Summary: The Linux kernel
 # Include RHEL files
 %global include_rhel 1
 # Include RT files
-%global include_rt 1
+%global include_rt 0
 # Include Automotive files
-%global include_automotive 1
+%global include_automotive 0
 # Provide Patchlist.changelog file
 %global patchlist_changelog 1
 # Set released_kernel to 1 when the upstream source tarball contains a
@@ -158,7 +158,9 @@ Summary: The Linux kernel
 #  to build the base kernel using the debug configuration. (Specifying
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 1
-# define buildid .local
+
+%define buildid .bf_xen
+
 %define specrpmversion 6.13.9
 %define specversion 6.13.9
 %define patchversion 6.13
